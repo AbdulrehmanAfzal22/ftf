@@ -1,0 +1,1315 @@
+.app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Horizontal Scroll Container */
+.horizontal-scroll-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.section-view {
+  min-width: 100vw;
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Next Button */
+.next-button {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(24, 188, 180, 0.6);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: #18bcb4;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.next-button:hover {
+  background: rgba(24, 188, 180, 0.2);
+  border-color: rgba(24, 188, 180, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(24, 188, 180, 0.4);
+}
+
+.app.light-mode .next-button {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(24, 188, 180, 0.8);
+  color: #18bcb4;
+}
+
+.app.light-mode .next-button:hover {
+  background: rgba(24, 188, 180, 0.15);
+  border-color: rgba(24, 188, 180, 1);
+}
+
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.75) 60%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.2) 90%,
+    rgba(0, 0, 0, 0.1) 95%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Light Mode Gradient */
+.app.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(200, 200, 200, 0.85) 0%,
+    rgba(200, 200, 200, 0.85) 50%,
+    rgba(200, 200, 200, 0.75) 60%,
+    rgba(200, 200, 200, 0.6) 70%,
+    rgba(200, 200, 200, 0.4) 80%,
+    rgba(200, 200, 200, 0.2) 90%,
+    rgba(200, 200, 200, 0.1) 95%,
+    transparent 100%
+  );
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.app.light-mode .theme-toggle {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.app.light-mode .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Second Page - Primary Color Background */
+.app-page-2 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Light Mode - Second Page */
+.app-page-2.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-2.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-2 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+}
+
+/* Third Page - Primary Color Background (Flipped Layout) */
+.app-page-3 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Light Mode - Third Page */
+.app-page-3.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-3.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+/* Fourth Page - Video on Left, Text on Right */
+.app-page-4 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-4 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Fourth Page */
+.app-page-4.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-4.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-4.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-4.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Fifth Page - Text on Left, Video on Right (Like Section 3) */
+.app-page-5 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-5 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+}
+
+/* Light Mode - Fifth Page */
+.app-page-5.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-5.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-5.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-5.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Sixth Page - Video on Left, Text on Right (Like Section 4) */
+.app-page-6 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-6 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Sixth Page */
+.app-page-6.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-6.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-6.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-6.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Seventh Page - Text on Left, Video on Right (Like Section 5) */
+.app-page-7 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-7 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Seventh Page */
+.app-page-7.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-7.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-7.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-7.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Eighth Page - Video on Left, Text on Right (Like Section 6) */
+.app-page-8 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-8::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-8 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Eighth Page */
+.app-page-8.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-8.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-8.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-8.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Ninth Page - Text on Left, Video on Right (Like Section 7) */
+.app-page-9 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-9::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-9 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Ninth Page */
+.app-page-9.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-9.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-9.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-9.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Tenth Page - Video on Left, Text on Right (Like Section 8) */
+.app-page-10 {
+  background-color: #000000;
+  background-image: none;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page-10::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-page-10 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Tenth Page */
+.app-page-10.light-mode {
+  background-color: #f5f5f5;
+}
+
+.app-page-10.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.app-page-10.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-10.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.app-page-3 .container {
+  height: 85vh;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 100px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Left Side - Branding Section */
+.branding-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 2;
+  width: calc(50vw - 200px);
+  max-width: calc(50vw - 200px);
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.brand-name {
+  font-size: 52px;
+  font-weight: 800;
+  color: #18bcb4;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Light Mode - Main Heading Color */
+.app.light-mode .brand-name {
+  color: #000000;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.separator {
+  width: 2px;
+  height: 120px;
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.figma-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figma-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 50%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.figma-shape {
+  position: absolute;
+  border-radius: 50% 0 50% 50%;
+}
+
+.shape-1 {
+  width: 30px;
+  height: 30px;
+  background: #f24e1e;
+  top: 0;
+  left: 0;
+  border-radius: 30px 0 30px 0;
+}
+
+.shape-2 {
+  width: 30px;
+  height: 30px;
+  background: #a259ff;
+  top: 0;
+  right: 0;
+  border-radius: 0 30px 0 30px;
+}
+
+.shape-3 {
+  width: 30px;
+  height: 30px;
+  background: #0acf83;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px 0 30px 0;
+}
+
+.shape-4 {
+  width: 30px;
+  height: 30px;
+  background: #1abcfe;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 30px 0 30px;
+}
+
+.design-title {
+  font-size: 64px;
+  font-weight: 900;
+  color: #18bcb4;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+/* Light Mode - Design Title */
+.app-page-2.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.app-page-3.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.screen-count {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+}
+
+/* Light Mode - Slogan Color */
+.app.light-mode .screen-count {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Right Side - Phone Screens Gallery */
+.screens-gallery {
+  width: 60%;
+  height: 100%;
+  padding-left: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Phone Screens Stack - Horizontal Overlapping Effect */
+.phone-screens-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  perspective: 1200px;
+  padding-left: 0;
+  overflow: visible;
+  min-width: 800px;
+}
+
+.phone-screen {
+  position: relative;
+  width: 240px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, z-index 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  margin-left: -80px;
+  pointer-events: auto;
+}
+
+.phone-screen:first-child {
+  margin-left: 0;
+}
+
+.phone-screen:nth-child(1) {
+  transform: rotateY(-12deg) rotateZ(-3deg) scale(0.85);
+  z-index: 1;
+  opacity: 1;
+}
+
+.phone-screen:nth-child(2) {
+  transform: rotateY(-6deg) rotateZ(-2deg) scale(0.9);
+  z-index: 2;
+  opacity: 1;
+}
+
+.phone-screen:nth-child(3) {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1);
+  z-index: 5;
+  opacity: 1;
+}
+
+.phone-screen:nth-child(4) {
+  transform: rotateY(6deg) rotateZ(2deg) scale(0.9);
+  z-index: 2;
+  opacity: 1;
+}
+
+.phone-screen:nth-child(5) {
+  transform: rotateY(12deg) rotateZ(3deg) scale(0.85);
+  z-index: 1;
+  opacity: 1;
+  position: relative;
+  will-change: transform, z-index;
+}
+
+.phone-screen:hover {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1.08) !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  box-shadow: 0 30px 80px rgba(24, 188, 180, 0.5), 0 0 0 8px rgba(24, 188, 180, 0.3);
+}
+
+.phone-screen:nth-child(5):hover {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1.08) !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  box-shadow: 0 30px 80px rgba(24, 188, 180, 0.5), 0 0 0 8px rgba(24, 188, 180, 0.3);
+  position: relative;
+}
+
+/* Screens Gallery on Left */
+.screens-gallery-left {
+  width: 40%;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Branding Section on Right */
+.branding-section-right {
+  width: calc(60% - 100px);
+  max-width: calc(60% - 100px);
+  padding-left: 280px;
+  margin-left: 60px;
+  z-index: 1;
+}
+
+/* Section 4 - Additional margin right for text */
+.app-page-4 .branding-section-right {
+  margin-right: 80px;
+}
+
+/* Section 6 - Additional margin right for text */
+.app-page-6 .branding-section-right {
+  margin-right: 80px;
+}
+
+/* Section 8 - Additional margin right for text */
+.app-page-8 .branding-section-right {
+  margin-right: 80px;
+}
+
+/* Section 10 - Additional margin right for text */
+.app-page-10 .branding-section-right {
+  margin-right: 80px;
+}
+
+.branding-section-right .design-title {
+  font-size: 48px;
+}
+
+/* Branding Section on Left (Page 3) */
+.branding-section-left {
+  width: calc(60% - 100px);
+  max-width: calc(60% - 100px);
+  padding-right: 0;
+  margin-right: 60px;
+  margin-left: 40px;
+  z-index: 1;
+}
+
+.branding-section-left .design-title {
+  font-size: 48px;
+}
+
+/* Screens Gallery on Right (Page 3) */
+.screens-gallery-right {
+  width: 40%;
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Video Container for Section 3 and 4 */
+.video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.screens-gallery-right .video-container {
+  margin-right: 40%;
+}
+
+.screens-gallery-left .video-container {
+  margin-left: 40%;
+}
+
+.section-video {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 77.6 / 163; /* iPhone 16 Pro Max: 77.6mm wide × 163mm tall */
+  border-radius: 35px; /* iPhone 16 Pro Max rounded corners */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 8px rgba(20, 100, 95, 0.6),
+    0 0 0 12px rgba(20, 100, 95, 0.3),
+    inset 0 0 0 2px rgba(24, 188, 180, 0.3);
+  object-fit: contain;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+  border: 2px solid rgba(20, 100, 95, 0.8);
+}
+
+/* iPhone notch simulation */
+.section-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000000;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Light Mode - Video Styling */
+.app-page-3.light-mode .section-video,
+.app-page-4.light-mode .section-video,
+.app-page-5.light-mode .section-video,
+.app-page-6.light-mode .section-video,
+.app-page-7.light-mode .section-video,
+.app-page-8.light-mode .section-video,
+.app-page-9.light-mode .section-video,
+.app-page-10.light-mode .section-video {
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 8px rgba(0, 0, 0, 0.15),
+    0 0 0 12px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 2px solid rgba(200, 200, 200, 0.5);
+}
+
+.app-page-3.light-mode .section-video::before,
+.app-page-4.light-mode .section-video::before,
+.app-page-5.light-mode .section-video::before,
+.app-page-6.light-mode .section-video::before,
+.app-page-7.light-mode .section-video::before,
+.app-page-8.light-mode .section-video::before,
+.app-page-9.light-mode .section-video::before,
+.app-page-10.light-mode .section-video::before {
+  background: #ffffff;
+}
+
+/* Features List */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #18bcb4;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(24, 188, 180, 0.6);
+}
+
+.feature-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+}
+
+/* Light Mode - Feature Text */
+.app-page-2.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.app-page-3.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .container {
+    flex-direction: column;
+    padding: 60px 60px;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .branding-section {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .screens-gallery {
+    width: 100%;
+    height: 50%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .screens-gallery-left {
+    width: 100%;
+    padding-right: 0;
+    height: 50%;
+  }
+
+  .phone-screens-stack {
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .phone-screen {
+    width: 180px;
+    height: 360px;
+    margin-left: -60px;
+  }
+
+  .phone-screen:first-child {
+    margin-left: 0;
+  }
+
+  .phone-screen:nth-child(1) {
+    transform: rotateY(-10deg) rotateZ(-2deg) scale(0.8);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(2) {
+    transform: rotateY(-5deg) rotateZ(-1deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(3) {
+    transform: rotateY(0deg) rotateZ(0deg) scale(0.95);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(4) {
+    transform: rotateY(5deg) rotateZ(1deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(5) {
+    transform: rotateY(10deg) rotateZ(2deg) scale(0.8);
+    opacity: 1;
+  }
+
+  .branding-section-right {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .branding-section-right .design-title {
+    font-size: 36px;
+  }
+
+  .branding-section-left {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .branding-section-left .design-title {
+    font-size: 36px;
+  }
+
+  .screens-gallery-right {
+    width: 100%;
+    padding-right: 0;
+    height: 50%;
+    justify-content: center;
+  }
+
+  .features-list {
+    gap: 20px;
+  }
+
+  .feature-text {
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 42px;
+  }
+
+  .design-title {
+    font-size: 48px;
+  }
+
+  .app::before {
+    width: 100vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.88) 50%,
+      rgba(0, 0, 0, 0.75) 65%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0.35) 85%,
+      rgba(0, 0, 0, 0.15) 92%,
+      rgba(0, 0, 0, 0.05) 96%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .design-title {
+    font-size: 32px;
+  }
+
+  .screen-count {
+    font-size: 24px;
+  }
+
+  .phone-screens-stack {
+    padding-left: 10px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .phone-screen {
+    width: 140px;
+    height: 280px;
+    margin-left: -50px;
+    flex-shrink: 0;
+  }
+
+  .phone-screen:first-child {
+    margin-left: 0;
+  }
+
+  .phone-screen:nth-child(1),
+  .phone-screen:nth-child(5) {
+    display: none;
+  }
+
+  .phone-screen:nth-child(2) {
+    transform: rotateY(-8deg) rotateZ(-2deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(3) {
+    transform: rotateY(0deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+
+  .phone-screen:nth-child(4) {
+    transform: rotateY(8deg) rotateZ(2deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .features-list {
+    gap: 16px;
+  }
+
+  .feature-text {
+    font-size: 16px;
+  }
+
+  .branding-section-right .design-title {
+    font-size: 28px;
+  }
+
+  .branding-section-left .design-title {
+    font-size: 28px;
+  }
+}
