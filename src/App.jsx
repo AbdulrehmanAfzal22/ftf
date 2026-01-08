@@ -597,7 +597,9 @@ function App() {
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Multiple scheduling categories</p>
+                      <p className="feature-text">
+                        Multiple scheduling categories
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -621,7 +623,9 @@ function App() {
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Music preferences per session</p>
+                      <p className="feature-text">
+                        Music preferences per session
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -629,7 +633,9 @@ function App() {
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Gym offers & events booking</p>
+                      <p className="feature-text">
+                        Gym offers & events booking
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -751,11 +757,15 @@ function App() {
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Personalized workout per session</p>
+                      <p className="feature-text">
+                        Personalized workout per session
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">In-app workout tutorials & guidance</p>
+                      <p className="feature-text">
+                        In-app workout tutorials & guidance
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -763,7 +773,9 @@ function App() {
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Coach-designed & assigned workouts</p>
+                      <p className="feature-text">
+                        Coach-designed & assigned workouts
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -938,31 +950,45 @@ function App() {
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Global nutrition database integration</p>
+                      <p className="feature-text">
+                        Global nutrition database integration
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Barcode-based instant food logging</p>
+                      <p className="feature-text">
+                        Barcode-based instant food logging
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Custom meals with macro & micronutrients</p>
+                      <p className="feature-text">
+                        Custom meals with macro & micronutrients
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Recipe builder with full nutrient breakdown</p>
+                      <p className="feature-text">
+                        Recipe builder with full nutrient breakdown
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Coach-assigned nutrition plans</p>
+                      <p className="feature-text">
+                        Coach-assigned nutrition plans
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Favorites & reusable recipes</p>
+                      <p className="feature-text">
+                        Favorites & reusable recipes
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Real-time & historical calorie tracking</p>
+                      <p className="feature-text">
+                        Real-time & historical calorie tracking
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1078,21 +1104,26 @@ function App() {
               {/* Left Side - Content Section */}
               <div className="branding-section branding-section-left">
                 <div className="info-section">
-                  <h2 className="design-title">
-                    Client Hydration Tracker Module
-                  </h2>
+                  <h2 className="design-title">Client Hydration Module</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Track water & 100+ beverage types</p>
+                      <p className="feature-text">
+                        Track water & 100+ beverage types
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Add multiple drinks from an extensive database</p>
+                      <p className="feature-text">
+                        Add multiple drinks from an extensive database
+                      </p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Smart water-only calculation to encourage optimal hydration</p>
+                      <p className="feature-text">
+                        Smart water-only calculation to encourage optimal
+                        hydration
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1283,7 +1314,9 @@ function App() {
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Follow up for morning manifestations</p>
+                      <p className="feature-text">
+                        Follow up for morning manifestations
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1327,9 +1360,7 @@ function App() {
               {/* Right Side - Content Section */}
               <div className="branding-section branding-section-right">
                 <div className="info-section">
-                  <h2 className="design-title">
-                    Staff Settings and Client assesments
-                  </h2>
+                  <h2 className="design-title">Staff Client assesments</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -1379,7 +1410,9 @@ function App() {
                 <div className="features-list">
                   <div className="feature-item">
                     <div className="feature-bullet"></div>
-                    <p className="feature-text">Track cycle & fertility dates</p>
+                    <p className="feature-text">
+                      Track cycle & fertility dates
+                    </p>
                   </div>
                   <div className="feature-item">
                     <div className="feature-bullet"></div>

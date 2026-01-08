@@ -6,10 +6,17 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  .app-wrapper {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Horizontal Scroll Container */
 .horizontal-scroll-container {
   width: 100%;
-  height: 100%;
+  height: 680px;
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
@@ -31,7 +38,7 @@
 .section-view {
   min-width: 100vw;
   width: 100vw;
-  height: 100%;
+  height: 680px;
   flex-shrink: 0;
   scroll-snap-align: start;
   position: relative;
@@ -82,7 +89,7 @@
 
 .app {
   width: 100vw;
-  height: 100vh;
+  height: 800px;
   background-color: #000000;
   background-size: cover;
   background-position: center right;
@@ -90,6 +97,7 @@
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
+  transition: background-color 0.5s ease, background-image 0.5s ease;
 }
 
 .app::before {
@@ -112,6 +120,7 @@
   );
   z-index: 1;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 /* Light Mode Gradient */
@@ -173,9 +182,10 @@
 .app-page-2 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-2::before {
@@ -192,6 +202,7 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 /* Light Mode - Second Page */
@@ -208,7 +219,7 @@
 }
 
 .app-page-2 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 60px;
   padding-right: 100px;
@@ -218,9 +229,10 @@
 .app-page-3 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-3::before {
@@ -237,6 +249,7 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 /* Light Mode - Third Page */
@@ -256,9 +269,10 @@
 .app-page-4 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-4::before {
@@ -275,10 +289,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-4 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 60px;
   padding-right: 100px;
@@ -313,9 +328,10 @@
 .app-page-5 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-5::before {
@@ -332,10 +348,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-5 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 100px;
   padding-right: 60px;
@@ -368,9 +385,10 @@
 .app-page-6 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-6::before {
@@ -387,10 +405,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-6 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 60px;
   padding-right: 100px;
@@ -425,9 +444,10 @@
 .app-page-7 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-7::before {
@@ -444,10 +464,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-7 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 100px;
   padding-right: 60px;
@@ -482,9 +503,10 @@
 .app-page-8 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-8::before {
@@ -501,10 +523,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-8 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 60px;
   padding-right: 100px;
@@ -539,9 +562,10 @@
 .app-page-9 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-9::before {
@@ -558,10 +582,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-9 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 100px;
   padding-right: 60px;
@@ -596,9 +621,10 @@
 .app-page-10 {
   background-color: #000000;
   background-image: none;
-  height: 85vh;
+  height: 680px;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
 }
 
 .app-page-10::before {
@@ -615,10 +641,11 @@
   );
   z-index: 0;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 .app-page-10 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 60px;
   padding-right: 100px;
@@ -650,7 +677,7 @@
 }
 
 .app-page-3 .container {
-  height: 85vh;
+  height: 680px;
   overflow: visible;
   padding-left: 100px;
   padding-right: 60px;
@@ -666,7 +693,7 @@
   align-items: center;
   padding: 80px 100px;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
@@ -719,6 +746,7 @@
   flex-shrink: 1;
   min-width: 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 /* Light Mode - Main Heading Color */
@@ -806,6 +834,8 @@
   margin: 0;
   line-height: 1.1;
   letter-spacing: 1px;
+  transition: color 0.5s ease;
+  white-space: nowrap;
 }
 
 /* Light Mode - Design Title */
@@ -826,6 +856,7 @@
   letter-spacing: 2px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   opacity: 0.95;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 /* Light Mode - Slogan Color */
@@ -836,9 +867,9 @@
 
 /* Right Side - Phone Screens Gallery */
 .screens-gallery {
-  width: 60%;
+  width: 45%;
   height: 100%;
-  padding-left: 40px;
+  padding-left: 20px;
   position: relative;
   z-index: 2;
 }
@@ -855,6 +886,18 @@
   padding-left: 0;
   overflow: visible;
   min-width: 800px;
+}
+
+@media (max-width: 1024px) {
+  .phone-screens-stack {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-screens-stack {
+    min-width: unset;
+  }
 }
 
 .phone-screen {
@@ -923,7 +966,7 @@
 
 /* Screens Gallery on Left */
 .screens-gallery-left {
-  width: 40%;
+  width: 45%;
   padding-left: 0;
   padding-right: 0;
   display: flex;
@@ -933,28 +976,54 @@
   z-index: 2;
 }
 
+/* Section 2 - Increased gallery width */
+.app-page-2 .screens-gallery-left {
+  width: 55%;
+}
+
 /* Branding Section on Right */
 .branding-section-right {
-  width: calc(60% - 100px);
-  max-width: calc(60% - 100px);
-  padding-left: 280px;
-  margin-left: 60px;
+  width: calc(55% - 60px);
+  max-width: calc(55% - 60px);
+  padding-left: 150px;
+  margin-left: 30px;
   z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .branding-section-right {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* Section 2 - Reduced width for text section */
+.app-page-2 .branding-section-right {
+  width: calc(45% - 30px);
+  max-width: calc(45% - 30px);
+  padding-left: 80px;
+  margin-left: 40px;
 }
 
 /* Section 4 - Additional margin right for text */
 .app-page-4 .branding-section-right {
   margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
 }
 
 /* Section 6 - Additional margin right for text */
 .app-page-6 .branding-section-right {
   margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
 }
 
 /* Section 8 - Additional margin right for text */
 .app-page-8 .branding-section-right {
   margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
 }
 
 /* Section 10 - Additional margin right for text */
@@ -964,25 +1033,38 @@
 
 .branding-section-right .design-title {
   font-size: 48px;
+  white-space: nowrap;
+}
+
+/* Section 2 - Allow heading to wrap to 2 lines */
+.app-page-2 .branding-section-right .design-title {
+  white-space: normal;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Branding Section on Left (Page 3) */
 .branding-section-left {
-  width: calc(60% - 100px);
-  max-width: calc(60% - 100px);
+  width: calc(55% - 60px);
+  max-width: calc(55% - 60px);
   padding-right: 0;
-  margin-right: 60px;
-  margin-left: 40px;
+  margin-right: 30px;
+  margin-left: 15px;
   z-index: 1;
 }
 
 .branding-section-left .design-title {
   font-size: 48px;
+  white-space: nowrap;
 }
 
 /* Screens Gallery on Right (Page 3) */
 .screens-gallery-right {
-  width: 40%;
+  width: 45%;
   padding-right: 0;
   padding-left: 0;
   display: flex;
@@ -1001,6 +1083,9 @@
   justify-content: center;
   position: relative;
   margin-bottom: 40px;
+  min-height: 0;
+  flex-shrink: 1;
+  padding: 20px;
 }
 
 .screens-gallery-right .video-container {
@@ -1012,8 +1097,10 @@
 }
 
 .section-video {
-  width: 100%;
-  max-width: 300px;
+  width: auto;
+  max-width: 500px;
+  max-height: 100%;
+  height: auto;
   aspect-ratio: 77.6 / 163; /* iPhone 16 Pro Max: 77.6mm wide × 163mm tall */
   border-radius: 35px; /* iPhone 16 Pro Max rounded corners */
   box-shadow: 
@@ -1026,6 +1113,8 @@
   background: #000000;
   overflow: hidden;
   border: 2px solid rgba(20, 100, 95, 0.8);
+  flex-shrink: 1;
+  transition: box-shadow 0.5s ease, border-color 0.5s ease, background 0.5s ease;
 }
 
 /* iPhone notch simulation */
@@ -1041,6 +1130,7 @@
   border-radius: 0 0 20px 20px;
   z-index: 10;
   pointer-events: none;
+  transition: background 0.5s ease;
 }
 
 /* Light Mode - Video Styling */
@@ -1105,6 +1195,7 @@
   letter-spacing: 0.5px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   opacity: 0.95;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 /* Light Mode - Feature Text */
@@ -1123,8 +1214,25 @@
   .container {
     flex-direction: column;
     padding: 60px 60px;
-    height: 100vh;
+    height: 800px;
+    gap: 40px;
     overflow: hidden;
+    display: flex;
+  }
+
+  .app-page-2 .container,
+  .app-page-3 .container,
+  .app-page-4 .container,
+  .app-page-5 .container,
+  .app-page-6 .container,
+  .app-page-7 .container,
+  .app-page-8 .container,
+  .app-page-9 .container,
+  .app-page-10 .container {
+    height: 680px;
+    gap: 40px;
+    overflow: hidden;
+    display: flex;
   }
 
   .branding-section {
@@ -1136,15 +1244,15 @@
 
   .screens-gallery {
     width: 100%;
-    height: 50%;
+    height: auto;
     padding-left: 0;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .screens-gallery-left {
     width: 100%;
     padding-right: 0;
-    height: 50%;
+    height: auto;
   }
 
   .phone-screens-stack {
@@ -1191,10 +1299,13 @@
     width: 100%;
     max-width: 100%;
     padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .branding-section-right .design-title {
     font-size: 36px;
+    white-space: nowrap;
   }
 
   .branding-section-left {
@@ -1202,17 +1313,25 @@
     max-width: 100%;
     padding-right: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .branding-section-left .design-title {
     font-size: 36px;
+    white-space: nowrap;
   }
 
   .screens-gallery-right {
     width: 100%;
     padding-right: 0;
-    height: 50%;
+    height: auto;
     justify-content: center;
+  }
+
+  .screens-gallery-right .video-container,
+  .screens-gallery-left .video-container {
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .features-list {
@@ -1229,6 +1348,7 @@
 
   .design-title {
     font-size: 48px;
+    white-space: nowrap;
   }
 
   .app::before {
@@ -1247,29 +1367,192 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px 30px;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .app-page-2 .container,
+  .app-page-3 .container,
+  .app-page-4 .container,
+  .app-page-5 .container,
+  .app-page-6 .container,
+  .app-page-7 .container,
+  .app-page-8 .container,
+  .app-page-9 .container,
+  .app-page-10 .container {
+    padding: 40px 30px;
+    height: 680px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .branding-section-right {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .branding-section-left {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .screens-gallery-right .video-container {
+    margin-right: 0;
+  }
+
+  .screens-gallery-left .video-container {
+    margin-left: 0;
+  }
+
+  .section-video {
+    max-width: 500px;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .next-button {
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .theme-toggle {
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+    height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .app-page-2 .container,
+  .app-page-3 .container,
+  .app-page-4 .container,
+  .app-page-5 .container,
+  .app-page-6 .container,
+  .app-page-7 .container,
+  .app-page-8 .container,
+  .app-page-9 .container,
+  .app-page-10 .container {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+    height: 680px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .app-page-2,
+  .app-page-3,
+  .app-page-4,
+  .app-page-5,
+  .app-page-6,
+  .app-page-7,
+  .app-page-8,
+  .app-page-9,
+  .app-page-10 {
+    height: 680px;
+  }
+
   .brand-name {
-    font-size: 36px;
+    font-size: 28px;
+    white-space: normal;
+    line-height: 1.2;
   }
 
   .design-title {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .screen-count {
-    font-size: 24px;
+    font-size: 18px;
+    white-space: normal;
+    letter-spacing: 1px;
+  }
+
+  .branding-section {
+    width: 100%;
+    max-width: 100%;
+    gap: 15px;
+    flex-shrink: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .branding-section-right,
+  .branding-section-left {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .screens-gallery,
+  .screens-gallery-left,
+  .screens-gallery-right {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex: 1 1 0;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    display: flex;
   }
 
   .phone-screens-stack {
     padding-left: 10px;
     overflow-x: auto;
     justify-content: flex-start;
+    min-width: unset;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .phone-screens-stack::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .phone-screens-stack::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+
+  .phone-screens-stack::-webkit-scrollbar-thumb {
+    background: rgba(24, 188, 180, 0.5);
+    border-radius: 2px;
   }
 
   .phone-screen {
-    width: 140px;
-    height: 280px;
-    margin-left: -50px;
+    width: 120px;
+    height: 240px;
+    margin-left: -40px;
     flex-shrink: 0;
   }
 
@@ -1297,19 +1580,171 @@
     opacity: 1;
   }
 
+  .video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    min-height: 0;
+    flex-shrink: 1;
+  }
+
+  .section-video {
+    max-width: 450px;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
   .features-list {
-    gap: 16px;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .feature-item {
+    gap: 12px;
   }
 
   .feature-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .branding-section-right .design-title,
+  .branding-section-left .design-title {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  .info-section {
+    gap: 12px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .logo-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .app-logo {
+    height: 60px;
+  }
+
+  .next-button {
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .app::before {
+    width: 100vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.88) 50%,
+      rgba(0, 0, 0, 0.75) 65%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0.35) 85%,
+      rgba(0, 0, 0, 0.15) 92%,
+      rgba(0, 0, 0, 0.05) 96%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+    gap: 15px;
+    height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .app-page-2 .container,
+  .app-page-3 .container,
+  .app-page-4 .container,
+  .app-page-5 .container,
+  .app-page-6 .container,
+  .app-page-7 .container,
+  .app-page-8 .container,
+  .app-page-9 .container,
+  .app-page-10 .container {
+    padding: 20px 15px;
+    gap: 15px;
+    height: 680px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .brand-name {
+    font-size: 24px;
+  }
+
+  .design-title {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  .screen-count {
     font-size: 16px;
   }
 
-  .branding-section-right .design-title {
-    font-size: 28px;
+  .branding-section-right .design-title,
+  .branding-section-left .design-title {
+    font-size: 20px;
+    white-space: nowrap;
   }
 
-  .branding-section-left .design-title {
-    font-size: 28px;
+  .feature-text {
+    font-size: 13px;
+  }
+
+  .phone-screen {
+    width: 100px;
+    height: 200px;
+    margin-left: -30px;
+  }
+
+  .section-video {
+    max-width: 500px;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .app-logo {
+    height: 50px;
+  }
+
+  .next-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 10px;
+  }
+
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
