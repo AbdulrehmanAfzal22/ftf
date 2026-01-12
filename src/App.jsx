@@ -297,11 +297,13 @@ function App() {
                   className="app-logo"
                 />
               </div>
-              <h1 className="brand-name">Forward Fitness's Thinking</h1>
+              <h1 className="brand-name">Fit Plus Apps</h1>
             </div>
 
             <div className="info-section">
-              <p className="screen-count">THE FUTURE OF YOUR FITNESS IS NOW</p>
+              <p className="screen-count">
+                All in one branded solutions for gym owners
+              </p>
             </div>
           </div>
 
@@ -397,7 +399,7 @@ function App() {
               {/* Left Side - Content Section */}
               <div className="branding-section branding-section-left">
                 <div className="info-section">
-                  <h2 className="design-title">Client News Feed Module</h2>
+                  <h2 className="design-title">Client Home Module</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -471,7 +473,7 @@ function App() {
               {/* Left Side - Content Section */}
               <div className="branding-section branding-section-left">
                 <div className="info-section">
-                  <h2 className="design-title">Staff News Feed Module</h2>
+                  <h2 className="design-title">Staff Home Module</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -615,7 +617,7 @@ function App() {
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
-                      <p className="feature-text">Remote & in-gym booking</p>
+                      <p className="feature-text">Remote & on-site booking</p>
                     </div>
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -946,7 +948,7 @@ function App() {
               {/* Right Side - Content Section */}
               <div className="branding-section branding-section-right">
                 <div className="info-section">
-                  <h2 className="design-title">Client Food Logger Module</h2>
+                  <h2 className="design-title">Client Nutrition Module</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -1032,7 +1034,7 @@ function App() {
               {/* Right Side - Content Section */}
               <div className="branding-section branding-section-right">
                 <div className="info-section">
-                  <h2 className="design-title">Staff Food Logger Module</h2>
+                  <h2 className="design-title">Staff Nutrition Module</h2>
                   <div className="features-list">
                     <div className="feature-item">
                       <div className="feature-bullet"></div>
@@ -1406,7 +1408,7 @@ function App() {
             {/* Left Side - Content Section */}
             <div className="branding-section branding-section-left">
               <div className="info-section">
-                <h2 className="design-title">Client Cycle Tracker Module</h2>
+                <h2 className="design-title">Client Cycle Module</h2>
                 <div className="features-list">
                   <div className="feature-item">
                     <div className="feature-bullet"></div>
